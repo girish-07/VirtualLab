@@ -1,6 +1,8 @@
 # VirtualLab
 This repository is created for demonstrating my idea for Hack Solstice Hackathon.
 
+<a href="https://girish-07.github.io/VirtualLab/">CLICK HERE TO VIEW THE WEBSITE</a>
+
 Problem Statement:
 Many schools does not have the lab facilities. Particularly, understanding concepts in science, like in the field of biology would not be feasible without visualizing. In order bring the taste of the lab accessible to all students across the globe, we could use the AR technology in order to demonstrate the concepts, which helps students to visualize and understand better.
 
