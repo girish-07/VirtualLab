@@ -17,5 +17,8 @@ Also, with the AR technology, it is helpful for the architects to plan the struc
 <img src="./Voice to Text.png">
 This is getting input through the text area
 
+<img src="./CHATGPT.png">
+For the blind people, they could give input through Voice to Text which is fed into the chatGPT model, as it is not currently available in OpenAI to recognise the speech and there queries could be answered, which could be read out
+
 <img src="./HomePage.png">
 This is the basic design of the home page
