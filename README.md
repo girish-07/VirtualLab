@@ -14,6 +14,9 @@ Students can see the heart and all its dimensions, hence, it helps every student
 <img src="./Building.png">
 Also, with the AR technology, it is helpful for the architects to plan the structure of the building, hence the loss could be minimised as the work of prototyping is not necessary
 
+<img src="./Hiro.jpeg">
+Use this Hiro image to view the AR model in the website
+
 <img src="./Voice to Text.png">
 This is getting input through the text area
 
