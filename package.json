@@ -2,7 +2,6 @@
   "name": "virtuallab",
   "version": "1.0.0",
   "description": "AR app",
-  "type":"module",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",

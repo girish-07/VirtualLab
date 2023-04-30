@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="index.css">
+        <script src="home.js"></script>
+        <title>DOCUMENT</title> 
+    </head>
+    <body style="overflow:hidden'">
+        <div id="space">
+            <h1 class="font-effect-neon" style="font-family: Rancho;font-size: 60px;">
+                Text to Speech in Javascript
+            </h1>
+        <p style="color: white">Select Voice: </p><select name="" id="voiceList"></select>
+        <br/><br/>
+        <input type="text" id="txtInput" />
+        <br/><br/> 
+        <button id="btnSpeak">SPEAK</button>
+        </div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <script>
+            var voiceList = document.querySelector('#voiceList');
+            var txtInput = document.querySelector('#txtInput');
+            var btnSpeak = document.querySelector('#btnSpeak');
+
+            var tts = window.speechSynthesis;
+            var voices = [];
+            GetVoices();
+
+            if(speechSynthesis !== undefined) {
+                speechSynthesis.onvoiceschanged = GetVoices;
+            }
+
+            btnSpeak.addEventListener('click', ()=> {
+                var toSpeak = new SpeechSynthesisUtterance(txtInput.value);
+                var selectedVoiceName = voiceList.selectedOptions[0].getAttribute('data-name');
+                voices.forEach((voice) => {
+                    if(voice.name === selectedVoiceName) {
+                        toSpeak.voice = voice;
+                    }
+                });
+                tts.speak(toSpeak)
+            })
+
+            function GetVoices() {
+                voices = tts.getVoices();
+                voiceList.innerHTML = '';
+                voices.forEach((voice) => {
+                    var listItem = document.createElement('option')
+                    listItem.textContent = voice.name;
+                    listItem.setAttribute('data-lang', voice.lang);
+                    listItem.setAttribute('data-name', voice.name);
+                    voiceList.appendChild(listItem)
+                });
+                voiceList.selectedIndex = 0;
+            }
+        </script>
+    </body>
+</html>
