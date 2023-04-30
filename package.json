@@ -2,6 +2,7 @@
   "name": "virtuallab",
   "version": "1.0.0",
   "description": "AR app",
+  "type":"module",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -10,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "nodemon": "^2.0.22"
+    "nodemon": "^2.0.22",
+    "openai": "^3.2.1"
   }
 }
